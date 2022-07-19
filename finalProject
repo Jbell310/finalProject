@@ -1,0 +1,61 @@
+from tkinter import *
+
+web = Tk()
+web.geometry('750x500')
+web.title('Three Ps Online Ordering')
+
+welcomeLabel = Label(web, text='Welcome to Peters Pizza Palace Online Ordering')
+welcomeLabel.grid(row=0, column=0)
+
+pizzaLabel=Label(web, text='Pizza', justify=LEFT, anchor='w')
+pizzaLabel.grid(sticky = 'w', row=1, column=0)
+
+extrasLabel=Label(web, text='Extras', justify=LEFT, anchor='w')
+extrasLabel.grid(sticky='w', row=1, column=1)
+
+web_v=IntVar(web)
+
+classicsLabel = Label(web, text="Choose from our classics:", justify=LEFT, anchor='w')
+classicsLabel.grid(sticky='w', row=2, column=0)
+
+mLovers=Checkbutton(web, text='Meat Lovers', variable=web_v, anchor='w')
+mLovers.grid(sticky='w', row=3, column=0)
+
+threeCheese=Checkbutton(web, text='Three Cheese', variable=web_v, anchor='w')
+threeCheese.grid(sticky='w', row=4, column=0)
+
+dDish=Checkbutton(web, text='Deep Dish', variable=web_v, anchor='w')
+dDish.grid(sticky='w', row=5, column=0)
+
+buffChick=Checkbutton(web, text='Buffalo Chicken', variable=web_v, anchor='w')
+buffChick.grid(sticky='w', row=6, column=0)
+
+veggie=Checkbutton(web, text='Vegetarian', variable=web_v, anchor='w')
+veggie.grid(sticky='w', row=7, column=0)
+
+byoLabel = Label(web, text="Build your own: ", justify=LEFT, anchor='w')
+byoLabel.grid(sticky='w', row=8, column=0)
+
+
+sidesLabel = Label(web, text="Choose from our handcrafted sides: ", justify=LEFT, anchor='w')
+sidesLabel.grid(sticky='w', row=2, column=1)
+
+bSticks=Checkbutton(web, text='Bread Sticks', variable=web_v, anchor='w')
+bSticks.grid(sticky='w', row=3, column=1)
+
+oRings=Checkbutton(web, text='Onion Rings', variable=web_v, anchor='w')
+oRings.grid(sticky='w', row=4, column=1)
+
+cheeseCurds=Checkbutton(web, text='Cheese Curds', variable=web_v, anchor='w')
+cheeseCurds.grid(sticky='w', row=5, column=1)
+
+gBread=Checkbutton(web, text='Garlic Bread', variable=web_v, anchor='w')
+gBread.grid(sticky='w', row=6, column=1)
+
+salad=Checkbutton(web, text='Ceasar Salad', variable=web_v, anchor='w')
+salad.grid(sticky='w', row=7, column=1)
+
+drinkLabel = Label(web, text="Add a drink: ", justify=LEFT, anchor='w')
+drinkLabel.grid(sticky='w', row=8, column=1)
+
+web.mainloop()
